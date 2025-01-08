@@ -23,7 +23,7 @@ int main()
             fibnum[i]=fib(i);
         }
         
-        #pragma omp barrier //To make the second thread wait till first one finishes the work
+        #pragma omp barrier 
         if(omp_get_thread_num()!=0)
         {
             printf(“Thread %d is printing number.\n”,omp_get_thread_num());
